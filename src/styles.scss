@@ -1,0 +1,724 @@
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('./assets/fonts/Gilroy.ttf');
+}
+
+@font-face {
+    font-family: 'Gilroy-Semibold';
+    src: url('./assets/fonts/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('./assets/fonts/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('./assets/fonts/Gilroy-Medium.ttf');
+}
+.font-Regular {
+    font-family: 'Gilroy-Regular';
+}
+
+.font-Semibold {
+    font-family: 'Gilroy-Semibold';
+}
+
+.font-Bold {
+    font-family: 'Gilroy-Bold';
+}
+
+.font-Medium {
+    font-family: 'Gilroy-Medium';
+}
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  *::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
+.fa-solid{
+    cursor: pointer;
+}
+
+.light-theme{
+// variables
+$theme-color: #3751C8;
+$bg-2light: #f8f9fd;
+$bg-3light: aliceblue;
+$table-secondary: #e9eaee;
+$body_color: white;
+
+html {
+    width: 100%;
+    overflow: auto;
+    transition: .2s;
+}
+body {
+    font-family: 'Gilroy-Regular';
+    text-transform: capitalize;
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: .2s;
+    background-color: $body_color;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 0;
+}
+input:focus {
+    outline: none;
+}
+textarea:focus-visible {
+    outline: none !important;
+}
+:focus-visible {
+    outline: none !important;
+}
+.theme_background {
+    background-color: $theme-color;
+}
+.bg-2light{
+    background-color: $bg-2light;
+}
+.bg-3light{
+    background-color:$bg-3light;
+}
+.error_msg {
+    font-size: 10px !important;
+    font-family: 'Gilroy-Medium' !important;
+    color: red !important;
+    text-align: left !important;
+    margin-bottom: 3px;
+    margin-inline-start: 6px;
+}
+.bg-yellow{
+    background-color: #FFBC42;
+}
+.main_container{
+    padding: 2rem 3rem;
+}
+.banner_container{
+    border-radius: 0px 0px 65px 65px;
+    height: 90%;
+    width: 100%;
+    color: white;
+    background-image: url('./assets/img/Mask Group 4.png');
+    background-position:center;
+    background-color: $theme-color;
+    background-size: 70%;
+    transition: .3s;
+}
+.icon_container{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .2s;
+    &:hover{
+        background-color: #FFBC42;
+        transition: .2s;
+    }
+}
+.icon_container img{
+  width: 20px;
+}
+
+.yellow_btn{
+    background-color: #FFBC42;
+    border: 1px solid #FFBC42;
+    color: white;
+    height: 40px;
+    padding: 0 30px;
+    transition: .2s;
+    &:hover{
+       background-color: white;
+       color: #FFBC42;
+       border: 1px solid #FFBC42;
+       transition: .2s;
+    }
+    &:hover i{
+        position: relative;
+        left: 10px;
+        transition: .2s;
+    }
+}
+.inbox_action_btn{
+    border: 1px solid black;
+    height: 35px;
+    width: 35px;
+    i{
+        font-size: 12px;
+        transition: .2s;
+    }
+    &:hover {
+        opacity: 0.8;
+        transition: .2s;
+     }
+}
+.head_table{
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    tr{
+        th{
+            padding: 8px 20px;
+        }
+    }
+}
+.table_content{
+    height: 50vh;
+    font-size: 14px;
+    font-family: 'Gilroy-Medium';
+    table{
+        tr{
+          td{
+              padding: 10px 20px;
+          }
+        }
+        tr:nth-child(odd){
+            background-color: $table-secondary;
+        }
+        tr:nth-child(even){
+            background-color: $bg-2light;
+        }
+    }
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+.dropdown-menu {
+    border: none;
+    transform: translate(-60px, 60px) !important;
+
+}
+.dropdown-menu:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: white transparent;
+    border-width: 0 11px 11px;
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+}
+.dropdown-item{
+    font-size: 13px;
+    font-family: 'Gilroy-Semibold';
+    padding: 0 12px;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #1e2125;
+    background-color: transparent;
+}
+.rounded_bottom{
+    border-radius: 0px 0px 50px 50px;
+}
+.Header_container{
+    color: white;
+    background-image: url('./assets/img/Mask Group 4.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    background-color: $theme-color;
+}
+.header_second_container{
+    color: black;
+}
+.Header_input_box{
+    background-color: $table-secondary;
+    border-radius: 25px;
+    padding: 5px 10px;
+    padding-inline-end: 5px;
+    display: flex;
+    align-items: center;
+    width: 290px;
+    justify-content: space-between;
+    margin-inline-end: 25px;
+    input{
+     background-color: transparent;
+     width: 80%;
+     padding-left: 25px;
+     font-family: 'Gilroy-SemiBold';
+     font-size: 13px;
+    }
+    button{
+        width: 20%;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        i{
+            font-size: 12px;
+        }
+    }
+}
+.header_btn{
+    height: 30px;
+    padding: 0 20px;
+    transition: .2s;
+    margin-inline-end: 15px;
+    &:hover{
+       transition: .2s;
+    }
+    i{
+        font-size: 10px;
+    }
+}
+.Yellow_bg-btn{
+    background-color: #FFBC42;
+    border: 1px solid #FFBC42;
+    color: white;
+    &:hover{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+}
+}
+
+.mdc-slider__track--active_fill{
+    border-color: #D5D5D5 !important;
+}
+.mdc-slider__track--inactive{
+    background-color: #D5D5D5 !important;
+    opacity: 0.3 !important;
+}
+.mdc-slider__thumb-knob {
+    background: transparent linear-gradient(180deg, #8B95FF 0%, #2744BE 100%) 0% 0% no-repeat padding-box !important;
+    border-color: white !important;
+    border-width: 3px !important;
+}
+.mdc-slider__value-indicator-container {
+    bottom: -30px !important;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+}
+.mdc-slider__value-indicator::before {
+    border-left: 6px solid white;
+    border-right: 6px solid white;
+    border-bottom: 6px solid white;
+    border-top: none !important;
+    top: -5px !important;
+    bottom: auto !important;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 0;
+}
+.mdc-slider__value-indicator {
+    background-color: white !important;
+    opacity: 1 !important;
+}
+.mdc-slider__value-indicator span{
+color: black !important;
+font-family: 'Gilroy-SemiBold' !important;
+}
+.mdc-slider__value-indicator{
+    transform: scale(1) !important;
+}
+ .mdc-slider__thumb::before{
+    background-color: white !important;
+}
+.mode_container{
+    width: 40px;
+    height: 40px;
+    background-image: url('./assets/img/Group\ 6294.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+}
+
+// light theme ends
+// Dark theme starts
+.dark-theme{
+    // variables
+    $theme-color: #222430 ;
+    $bg-2light: #585a6d ;
+    $bg-3light: #686a7b;
+    $table-secondary: #686a7b;
+    $body_color: #3e4157;
+    $text-color:white;
+    
+    html {
+        width: 100%;
+        overflow: auto;
+        transition: .2s;
+    }
+    body {
+        font-family: 'Gilroy-Regular';
+        text-transform: capitalize;
+        animation: fadeInAnimation ease .5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: .2s;
+     
+    }
+    .body{
+        background-color: white !important;
+        min-height: 100vh;
+    }
+    .dark-body{
+        background-color: $body_color;
+    }
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
+    
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-bottom: 0;
+    }
+    input:focus {
+        outline: none;
+    }
+    textarea:focus-visible {
+        outline: none !important;
+    }
+    :focus-visible {
+        outline: none !important;
+    }
+    .theme_background {
+        background-color: $theme-color;
+    }
+    .bg-2light{
+        background-color: $bg-2light;
+    }
+    .bg-3light{
+        background-color:$bg-3light;
+    }
+    .text-color{
+        color: $text-color;
+    }
+    .error_msg {
+        font-size: 10px !important;
+        font-family: 'Gilroy-Medium' !important;
+        color: red !important;
+        text-align: left !important;
+        margin-bottom: 3px;
+        margin-inline-start: 6px;
+    }
+    .bg-yellow{
+        background-color: #FFBC42;
+    }
+    .main_container{
+        padding: 2rem 3rem;
+    }
+    .banner_container{
+        border-radius: 0px 0px 65px 65px;
+        height: 90%;
+        width: 100%;
+        color: white;
+        background-image: url('./assets/img/Mask Group 4.png');
+        background-position:center;
+        background-color: $theme-color;
+        background-size: 70%;
+        transition: .3s;
+    }
+    .icon_container{
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        transition: .2s;
+        &:hover{
+            background-color: #FFBC42;
+            transition: .2s;
+        }
+    }
+    .icon_container img{
+      width: 20px;
+    }
+    .banner_tabs{
+    
+     button{
+        font-family: 'Gilroy-Semibold';
+        color: grey;
+        font-size: 15px;
+        position: relative;
+        
+    }
+    button.active{
+        color: black;
+        &::before{
+            content: ".";
+            color: transparent;
+            background-color: black;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            border-radius: 50%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            top: 40px;
+            transition: .2s;
+        }
+    }
+    
+    button:hover{
+        color: black;
+    }
+    }
+    .yellow_btn{
+        background-color: #FFBC42;
+        border: 1px solid #FFBC42;
+        color: white;
+        height: 40px;
+        padding: 0 30px;
+        transition: .2s;
+        &:hover{
+           background-color: white;
+           color: #FFBC42;
+           border: 1px solid #FFBC42;
+           transition: .2s;
+        }
+        &:hover i{
+            position: relative;
+            left: 10px;
+            transition: .2s;
+        }
+    }
+    .inbox_action_btn{
+        height: 35px;
+        width: 35px;
+        i{
+            font-size: 12px;
+            transition: .2s;
+        }
+        &:hover {
+           opacity: 0.8;
+           transition: .2s;
+        }
+    }
+    .head_table{
+        border-radius: 20px 20px 0px 0px;
+        color: white;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        tr{
+            th{
+                padding: 8px 20px;
+            }
+        }
+    }
+    .table_content{
+        height: 50vh;
+        font-size: 14px;
+        font-family: 'Gilroy-Medium';
+        table{
+            tr{
+              td{
+                  padding: 10px 20px;
+                  color: white;
+                  opacity: 0.9;
+              }
+            }
+            tr:nth-child(odd){
+                background-color: $table-secondary;
+            }
+            tr:nth-child(even){
+                background-color: $bg-2light;
+            }
+        }
+    }
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+    .dropdown-menu {
+        border: none;
+        transform: translate(-60px, 60px) !important;
+    
+    }
+    .dropdown-menu:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        z-index: 1;
+        border-style: solid;
+        border-color: white transparent;
+        border-width: 0 11px 11px;
+        top: -11px;
+        left: 50%;
+        margin-left: -11px;
+    }
+    .dropdown-item{
+        font-size: 13px;
+        font-family: 'Gilroy-Semibold';
+        padding: 0 12px;
+    }
+    .dropdown-item:focus, .dropdown-item:hover {
+        color: #1e2125;
+        background-color: transparent;
+    }
+    .rounded_bottom{
+        border-radius: 0px 0px 50px 50px;
+    }
+    .Header_container{
+        color: white;
+        background-image: url('./assets/img/Mask Group 4.png');
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: 100%;
+        background-color: $theme-color;
+    }
+    .header_second_container{
+        color: black;
+    }
+    .Header_input_box{
+        background-color: $table-secondary;
+        border-radius: 25px;
+        padding: 5px 10px;
+        padding-inline-end: 5px;
+        display: flex;
+        align-items: center;
+        width: 290px;
+        justify-content: space-between;
+        margin-inline-end: 25px;
+        input{
+         background-color: transparent;
+         width: 80%;
+         padding-left: 25px;
+         font-family: 'Gilroy-SemiBold';
+         font-size: 13px;
+        }
+        button{
+            width: 20%;
+            background-color: white;
+            border-radius: 50%;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            i{
+                font-size: 12px;
+            }
+        }
+    }
+    .header_btn{
+        height: 30px;
+        padding: 0 20px;
+        transition: .2s;
+        margin-inline-end: 15px;
+        &:hover{
+           transition: .2s;
+        }
+        i{
+            font-size: 10px;
+        }
+    }
+    .Yellow_bg-btn{
+        background-color: #FFBC42;
+        border: 1px solid #FFBC42;
+        color: white;
+        &:hover{
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+    }
+    }
+  
+    .mdc-slider__track--active_fill{
+        border-color: #6200ee;
+        border-color: white !important;
+    }
+    .mdc-slider__track--inactive{
+        background-color: white !important;
+        opacity: 0.3 !important;
+    }
+    .mdc-slider__thumb-knob {
+        background-color: #222430 !important;
+        border-color: white !important;
+        border-width: 3px !important;
+    }
+    .mdc-slider__value-indicator-container {
+        bottom: -30px !important;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+    .mdc-slider__value-indicator::before {
+        border-left: 6px solid white;
+        border-right: 6px solid white;
+        border-bottom: 6px solid white;
+        border-top: none !important;
+        top: -5px !important;
+        bottom: auto !important;
+        content: "";
+        height: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0;
+    }
+.mdc-slider__value-indicator {
+        background-color: white !important;
+        opacity: 0.7 !important;
+    }
+    .mdc-slider__value-indicator span{
+    color: black !important;
+    font-family: 'Gilroy-SemiBold' !important;
+    }
+    .mdc-slider__value-indicator{
+        transform: scale(1) !important;
+    }
+     .mdc-slider__thumb::before{
+        background-color: white !important;
+    }
+    .mode_container{
+        width: 40px;
+        height: 40px;
+        background-image: url('./assets/img/Group\ 6295.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+    }
+    }

@@ -1,0 +1,109 @@
+<div class="container-fluid m-0 p-0 bg-white min-h-screen">
+    <div class="d-flex align-content-between flex-wrap w-100 h-screen">
+
+    <div class="banner_container main_container" id="Home_banner">
+        <div class="row items-center">
+            <div class="col-md-4 text-left">
+                <p class="font-Semibold text-xs font-Semibold text-uppercase text-xl cursor-pointer">tempmail</p>   
+            </div>
+            <div class="col-md-4 text-center">
+                <p class="font-Semibold text-xs">Total Users Count <span class="text-2xl ml-2">191,237,292</span></p>
+            </div>
+            <div class="col-md-4 text-right">
+                <div class="d-flex items-center justify-end">
+                    <div class="dropdown flex">
+                        <button class="dropdown-toggle me-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="icon_container mode_container">
+                                <!-- <img src="../../assets/img/Group 6294.png" class="w-5"/> -->
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu rounded-xl" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item flex items-center justify-content-center">Dark mode
+                              <div class="form-switch ml-3">
+                                <input [(ngModel)]='dark' class="form-check-input" type="checkbox" (change)='darkMode()' id="flexSwitchCheckDefault" />
+                              </div>
+                          </a></li>
+                        </ul>
+                      </div>
+
+                     
+        
+                      <div class="dropdown flex">
+                        <button class="dropdown-toggle me-3" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="icon_container">
+                                <img src="../../assets/img/united-kingdom.png" class="w-5"/>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu rounded-lg" aria-labelledby="dropdownMenuButton2">
+                          <li>
+                              <a class="dropdown-item flex items-center" href="#">
+                              <img src="../../../assets/img/Group 65.png" alt="" class="w-8">
+                              English
+                              </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item flex items-center" href="#">
+                            <img src="../../../assets/img/Group 65.png" alt="" class="w-8">
+                            Hindi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item flex items-center" href="#">
+                            <img src="../../../assets/img/Group 65.png" alt="" class="w-8">
+                            French
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item flex items-center" href="#">
+                            <img src="../../../assets/img/Group 65.png" alt="" class="w-8">
+                            German
+                            </a>
+                        </li>
+                         
+                        </ul>
+                      </div>
+                    <button class="font-Semibold rounded-3xl flex items-center text-xs yellow_btn">
+                        Get Premium
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                </div>
+        </div>
+        <div class="m-auto flex items-center h-100 sm:w-screen md:w-1/2 text-center justify-content-center">
+            <div>
+                <p class="text-4xl text-white font-Bold leading-0 ">Lorem Ipsum is Simply Dummy <br/> Text of the Printing.</p>
+                <div class="flex items-center justify-content-center mt-4">
+                    <button class="py-2.5 px-3 font-Bold rounded-3xl text-dark text-xs bg-yellow w-44 mr-2"
+                    routerLink="/inbox-component">
+                        Random Name
+                    </button>
+                    <button class="py-2.5 px-3 font-Bold rounded-3xl text-dark text-xs bg-white w-44 ml-2">
+                        Choose
+                    </button>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+
+    <div class="sm:w-screen md:w-3/4 m-auto text-center pb-3">
+        <div id="content-tab">
+            <div >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+            <div >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+          </div>
+        <ul id="tabs">
+            <li (click) = 'toggleBanner()' >About Tempmail</li>
+            <li (click) = 'toggleBanner()' >Usage</li>
+            <li (click) = 'toggleBanner()' >Validity</li>
+            <li (click) = 'toggleBanner()' >Privacy</li>
+            <li (click) = 'toggleBanner()' >Meaning</li>
+          </ul>
+    </div>
+
+     </div>
+</div>
+
+ 
